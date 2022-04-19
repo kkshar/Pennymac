@@ -22,7 +22,7 @@ def leastDiffItem(itemCol, colA, colB):
     return sorted_diff[0][0]
 
 
-
+# output the day number with the smallest temperature spread.
 def weatherData():
     lst = getData('w_data.dat')
     start_row = 6
@@ -41,7 +41,7 @@ def weatherData():
     # output result
     print('Smallest temperature spread is on day', leastDiffItem(day, maxT, minT))
 
-
+# output the name of the team with the smallest difference in 'for' and 'against' goals.
 def soccerData():
     soccer = getData('soccer.dat')
     start_row = 3
@@ -58,7 +58,9 @@ def soccerData():
     convertStr(against_goals)
 
     # output result
-    print('The team with the smallest difference in ‘for’ and ‘against’ goals is', leastDiffItem(team, for_goals, against_goals))
+    print("The team with the smallest difference in 'for' and 'against' goals is", leastDiffItem(team, for_goals, against_goals))
 
-weatherData()
-soccerData()
+
+if __name__ == "__main__":
+    weatherData()
+    soccerData()
